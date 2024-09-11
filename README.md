@@ -26,7 +26,28 @@ Currently implemented proofs
 
 Usage
 -------------------
-There is no unified API at the moment, please follow the test attached to each proof for example usage. 
+Container deploy:
+```shell
+docker run --rm -it --name zk-pailleir docker.io/ubuntu:latest /binbash
+apt-get update && apt-get install -y curl build-essential vim
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+```
+Configuring `cargo` service:
+```shell
+vim ~/.bashrc
+export PATH="/root/.cargo/bin:${PATH}" // add this line
+source ~/.bashrc
+```
+
+Project deploy:
+```shell
+apt-get install libgmp-dev
+git clone https://github.com/alexcostars/zk-paillier.git
+cd zk-paillier/
+cargo build
+cargo test
+```
+
 
 Legacy 
 -------------------
