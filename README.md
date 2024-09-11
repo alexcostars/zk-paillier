@@ -28,7 +28,7 @@ Usage
 -------------------
 Container deploy:
 ```shell
-docker run --rm -it --name zk-pailleir docker.io/ubuntu:latest /binbash
+docker run --rm -it --name zk-paillier docker.io/ubuntu:latest /bin/bash
 apt-get update && apt-get install -y curl build-essential vim
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 ```
